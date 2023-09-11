@@ -1,0 +1,32 @@
+<div
+  class="drop-area"
+  appDnd
+  (filesDropped)="handleDroppedFiles($event)"
+>
+  <p>Arrastra y suelta archivos aquí</p>
+
+  <input type="file" style="display: none;" (change)="handleFileInput($event)" #fileInput>
+  <button (click)="fileInput.click()">Seleccionar archivos</button>
+</div>
+
+<ul *ngIf="files.length > 0">
+  <li *ngFor="let file of files; let i = index">
+    {{ file.name }} ({{ formatFileSize(file.size) }})
+    <button (click)="removeFile(i)">Eliminar</button>
+  </li>
+</ul>
+
+<div  class="progress-container">
+  <div class="progress">
+    <div class="progress-bar" [style.width]="uploadProgress + '%'">{{ uploadProgress }}%</div>
+  </div>
+</div>
+
+<div class="container"  appDnd
+(filesDropped)="handleDroppedFiles($event)">
+	<mat-icon class="cloud-icon" >cloud_upload</mat-icon>
+
+<input type="file" style="display: none;" (change)="handleFileInput($event)" #fileInput>
+  <h3 class="title-upload-file" >Drag & Drop or <span class="input-upload-file" (click)="fileInput.click()">Choose file</span> to upload</h3>
+  <p>600 MB max file size</p>
+</div>

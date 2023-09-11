@@ -1,0 +1,83 @@
+.drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.drop-area:hover {
+  border: 2px dashed #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.progress-container {
+  margin-top: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+}
+
+.progress {
+  margin-top: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  position: absolute;
+  transition: width 0.3s ease-in-out;
+}
+
+//   .progress {
+//     height: 100%;
+//     background-color: #007bff;
+//     text-align: center;
+//     line-height: 20px;
+//     color: #fff;
+//     transition: width 0.5s ease-in-out;
+//   }
+//   .progress-bar {
+//     height: 100%;
+//     background-color: #007bff;
+//     text-align: center;
+//     line-height: 20px;
+//     color: #fff;
+//     position: absolute;
+//     transition: width 0.3s ease-in-out;
+//   }
+
+.container {
+  width: 450px;
+  height: 200px;
+  padding: 2rem;
+  text-align: center;
+  border: dashed 1px #979797;
+  position: relative;
+  margin: 0 auto;
+
+
+  .btn-upload-file{
+      
+  }
+
+
+  .cloud-icon {
+    font-size: 25px;
+    color:#007bff;
+    
+  }
+
+}
