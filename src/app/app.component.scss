@@ -1,45 +1,45 @@
-.drop-area {
-  border: 2px dashed #ccc;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-}
+// .drop-area {
+//   border: 2px dashed #ccc;
+//   padding: 20px;
+//   text-align: center;
+//   cursor: pointer;
+// }
 
-.drop-area:hover {
-  border: 2px dashed #333;
-}
+// .drop-area:hover {
+//   border: 2px dashed #333;
+// }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+// ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
 
-li {
-  margin-bottom: 8px;
-}
+// li {
+//   margin-bottom: 8px;
+// }
 
-.progress-container {
-  margin-top: 20px;
-  height: 20px;
-  background-color: #f0f0f0;
-}
+// .progress-container {
+//   margin-top: 20px;
+//   height: 20px;
+//   background-color: #f0f0f0;
+// }
 
-.progress {
-  margin-top: 20px;
-  height: 20px;
-  background-color: #f0f0f0;
-  position: relative;
-}
+// .progress {
+//   margin-top: 20px;
+//   height: 20px;
+//   background-color: #f0f0f0;
+//   position: relative;
+// }
 
-.progress-bar {
-  height: 100%;
-  background-color: #007bff;
-  text-align: center;
-  line-height: 20px;
-  color: #fff;
-  position: absolute;
-  transition: width 0.3s ease-in-out;
-}
+// .progress-bar {
+//   height: 100%;
+//   background-color: #007bff;
+//   text-align: center;
+//   line-height: 20px;
+//   color: #fff;
+//   position: absolute;
+//   transition: width 0.3s ease-in-out;
+// }
 
 //   .progress {
 //     height: 100%;
@@ -59,25 +59,155 @@ li {
 //     transition: width 0.3s ease-in-out;
 //   }
 
-.container {
+.container-upload-file {
   width: 450px;
-  height: 200px;
-  padding: 2rem;
+  height: 80px;
+  padding: 0.5rem;
   text-align: center;
   border: dashed 1px #979797;
-  position: relative;
+  //position: relative;
   margin: 0 auto;
 
 
-  .btn-upload-file{
-      
+  .title-upload-file{
+     font-weight:400;
+     margin: 0;
+  }
+  
+  .input-upload-file{
+    color:#007bff;
+    cursor: pointer;
   }
 
-
   .cloud-icon {
-    font-size: 25px;
+    width: 35px;
+    font-size: 30px;
     color:#007bff;
     
   }
+  .text-upload-file{
+    color: #777373 ;
+    margin: 0;
+  }
 
+}
+
+
+.fileover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+.upload-files-list{
+  margin-top: 1rem;
+ 
+  .upload-single-file{
+    width: 450px;
+    margin: 0 auto;
+    //display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #b1b1b1;
+    
+  }
+ 
+ .info-file{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .name-files-list{
+    margin: 0;
+    color:#007bff;
+  }
+  .size-files-list{
+    margin: 0;
+  }
+  .btn-delete-upload-file{
+     margin: 0;
+     border: none;
+     font-weight: bold;
+     font-size: 15px;
+     background: none;
+     cursor: pointer;
+  }
+}
+
+.content-progres{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  .progress-cont {
+    height: 7px;
+    width: 90%;
+    border-radius: 4px;
+    background-color: #d0d0d0;
+    position: relative;
+  
+    .progress {
+      width: 0;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      background-color: #4c97cb;
+      transition: 0.5s all;
+    }
+  }
+
+  p{
+    margin-top:5px;
+  }
+}
+
+
+
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }

@@ -61,11 +61,11 @@ export class AppComponent {
       if (uploadedFiles === totalFiles) {
         clearInterval(uploadInterval);
         // Reiniciar la barra de progreso después de completar la carga simulada.
-        setTimeout(() => {
-          this.uploadProgress = undefined;
-        }, 1000);
+        // setTimeout(() => {
+        //   this.uploadProgress = undefined;
+        // }, 1000);
       }
     }, 1000); // Incrementar el progreso cada segundo (simulado).
   }
-  //*ngIf="uploadProgress !== undefined"
+  
 }
