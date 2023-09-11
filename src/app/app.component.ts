@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  
+  
   files: File[] = [];
   uploadProgress: number | undefined;
 
@@ -15,19 +16,25 @@ export class AppComponent {
 
   handleDroppedFiles(files: File[]) {
     this.files = files;
+    console.log(files);
     this.simulateUpload();
-   
+    
   }
    
-  handleFileInput(event: Event) {
+ 
+  handleFileInput(event: Event){
     const inputElement = event.target as HTMLInputElement;
-    const selectedFiles = inputElement.files;
+  const selectedFiles = inputElement.files;
 
-    if (selectedFiles) {
-      this.files = this.files.concat(Array.from(selectedFiles));
-      this.simulateUpload();
-    }
-  } 
+  if (selectedFiles && selectedFiles.length === 1) {
+    // Reemplazar el archivo existente con el nuevo archivo seleccionado
+    this.files = [selectedFiles[0]];
+    this.simulateUpload();
+    console.log('Archivo reemplazado:', this.files[0]);
+  }
+   
+  }
+  
 
   formatFileSize(size: number): string {
     const units = ['B', 'KB', 'MB', 'GB', 'TB'];
